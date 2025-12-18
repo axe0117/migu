@@ -142,14 +142,12 @@ intents.reactions = True
 client = Client(command_prefix="!", intents=intents)
 
 #slash commands I think---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-sleek = discord.Object(id=760697375949324308)
-tea = discord.Object(id=1317642142847336448)
-sura = discord.Object(id=740709011443155004)
-gh = discord.Object(id=900566348806107137)
-#sleecker ID = 760697375949324308
-#tea table ID = 1317642142847336448
-#suraimu ID = 740709011443155004
-#gh ID =900566348806107137
+sleek = discord.Object(id=sleekID)
+tea = discord.Object(id=teaID)
+sura = discord.Object(id=suraID)
+gh = discord.Object(id=ghostID)
+
+
 
 gangserv = [sleek, tea, sura, gh]
 
@@ -226,6 +224,6 @@ class InviteMenu(discord.ui.View):
 
 #THE APP-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # client = Client(intents=intents)
-client.run("")
+client.run(token)
 
 
