@@ -1,21 +1,32 @@
-import discord # type: ignore
+import discord 
 import time
-
-from discord.ext import commands # type: ignore
+from discord.ext import commands  # type: ignore
 from discord import app_commands # type: ignore
+import logging
+from dotenv import load_dotenv # type: ignore
+import os
+
+
+load_dotenv()
+token = os.getenv('DISCORD_TOKEN')
+sleekID = os.getenv('sleecker')
+teaID = os.getenv('tea')
+suraID = os.getenv('sura')
+ghostID = os.getenv('gh')
+
 
 class Client(commands.Bot):
     async def on_ready(self):  
         print(f'Logged on as {self.user}!')
         
-        botactivity = discord.Activity(type=discord.ActivityType.playing, name="Fortnite")
+        botactivity = discord.Activity(type=discord.ActivityType.playing, name="Fortnite 67")
         await Client.change_presence(self, activity=botactivity)
 
         try:
-            sleek = discord.Object(id=760697375949324308)
-            tea = discord.Object(id=1317642142847336448)
-            sura = discord.Object(id=740709011443155004)
-            gh = discord.Object(id=900566348806107137)
+            sleek = discord.Object(id=sleekID)
+            tea = discord.Object(id=teaID)
+            sura = discord.Object(id=suraID)
+            gh = discord.Object(id=ghostID)
 
             a = await self.tree.sync(guild=sleek)
             b = await self.tree.sync(guild=tea)
