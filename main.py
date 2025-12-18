@@ -1,7 +1,6 @@
 import discord # type: ignore
 import time
 
-print(bot_token)
 from discord.ext import commands # type: ignore
 from discord import app_commands # type: ignore
 
@@ -216,5 +215,6 @@ class InviteMenu(discord.ui.View):
 
 #THE APP-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # client = Client(intents=intents)
-client.run()
+client.run("")
+
 
